@@ -1,0 +1,81 @@
+/* ==== Global Styles ==== */
+@import 'tailwindcss';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-white text-black dark:bg-gray-900 dark:text-white font-sans flex flex-col items-center justify-center min-h-screen;
+}
+
+/* ==== Navbar Styling ==== */
+.navbar {
+  @apply w-full bg-gray-200 dark:bg-gray-800 py-4 px-6 flex justify-between items-center shadow-lg fixed top-0;
+}
+
+.navbar-logo {
+  @apply text-2xl font-bold bg-gradient-to-r from-blue-500 to-purple-500 text-transparent bg-clip-text;
+}
+
+.navbar-links {
+  @apply flex space-x-6;
+}
+
+.navbar-links a {
+  @apply text-black dark:text-white font-semibold transition-all duration-300 hover:text-blue-400;
+}
+
+/* ==== Main Container ==== */
+.container {
+  @apply max-w-4xl w-full px-6 py-12 mt-16;
+}
+
+/* ==== Header Styling ==== */
+h1 {
+  @apply text-5xl md:text-6xl font-extrabold text-center bg-gradient-to-r from-blue-500 to-purple-500 text-transparent bg-clip-text;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+/* ==== Brofile Card ==== */
+.brofile-card {
+  @apply bg-gray-100 dark:bg-gray-800 p-6 rounded-2xl shadow-lg border border-gray-700 text-center transition duration-300 hover:scale-105 mt-8;
+  animation: fadeUp 1s ease-in-out;
+}
+
+/* ==== Brofile Quote ==== */
+.bro-quote {
+  @apply text-lg italic text-yellow-500 dark:text-yellow-400 mt-2;
+  animation: fadeIn 2s ease-in-out;
+}
+
+/* ==== Buttons ==== */
+.btn-primary {
+  @apply bg-blue-600 text-white px-6 py-3 rounded-lg text-lg font-bold transition-all hover:bg-blue-700 hover:shadow-lg active:scale-95 mt-6;
+  animation: fadeUp 1.2s ease-in-out;
+}
+
+/* ==== Input Fields ==== */
+.input-field {
+  @apply bg-gray-300 dark:bg-gray-700 border border-gray-400 dark:border-gray-600 text-black dark:text-white px-4 py-2 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none w-full mt-4;
+}
+
+/* ==== Leaderboard ==== */
+.leaderboard {
+  @apply bg-gray-100 dark:bg-gray-800 p-4 rounded-xl shadow-md border border-gray-700 mt-12;
+  animation: fadeUp 1.5s ease-in-out;
+}
+
+.leaderboard-item {
+  @apply flex justify-between p-3 border-b border-gray-400 dark:border-gray-700;
+}
+
+/* ==== Animations ==== */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
